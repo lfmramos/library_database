@@ -1,0 +1,6 @@
+SELECT * FROM book WHERE book.author = 'Leo Tolstoi';
+SELECT COUNT(*) FROM book WHERE loaned = TRUE;
+Select publisher FROM book WHERE title = "O Primo Basílio";
+
+SELECT DISTINCT user.username,book.title,book.pub_date FROM user,reservation, book 
+WHERE user.id = reservation.user_id AND book.pub_date < '1974-01-01' AND reservation.book_id = book.id;
